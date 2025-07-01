@@ -1,0 +1,379 @@
+/*Standaardopmaak*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-image: linear-gradient(to bottom right, #ffffff, #ff7e53);
+}
+
+header {
+    text-align: center;
+    color: #ffffff;
+    background-color: #FC4100;
+    padding: 5px 0 5px 0;
+    margin-bottom: 25px;
+    border: 10px solid #FFC55A;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    color: #FC4100;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    color: #FC4100;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #d0d0d0;
+}
+
+hr {
+    margin-top: 100px;
+    border: 5px solid #FFC55A;
+    background-color: #FFC55A;
+}
+
+
+/*Navbar*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    z-index: 10;
+    width: 97.8vw;
+}
+
+nav a {
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 0 10px 0;
+}
+
+nav div {
+    flex-grow: 1;
+    text-align: center;
+    background-color: #FC4100;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+nav div:hover,
+nav div.selected {
+    background-color: #ff7e53;
+}
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+}
+
+
+/*Sections*/
+section.title {
+    margin-top: 10px;
+    font-size: 30px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+section.text {
+    background-color: #FC4100;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/*Figures*/
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+/*Grid*/
+.grid-container {
+    display: grid;
+    height: 500px;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    column-gap: 10px;
+    /*margin-bottom: -300px;*/
+    overflow: auto;
+}
+
+.grid-item {
+    background-color: #FC4100;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 100%;
+    overflow: scroll;
+}
+
+.grid-item img {
+    height: 100%;
+}
+
+.grid-item h3 {
+    color: #ffffff;
+}
+
+
+/*Image Galleries*/
+.imageGallery {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imageGallery img {
+    width: 48%;
+    height: auto;
+}
+
+.prototypeGallery {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.prototypeGallery img {
+    width: 25%;
+    height: auto;
+}
+
+.researchImages {
+    width: 50%;
+}
+
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FFC55A;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FC4100;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff7e53;
+}
+
+
+/*Selection*/
+::selection {
+    background-color: #000000;
+    color: #FFC55A;
+}
+
+
+/*Footer*/
+footer {
+    color: #ffffff;
+    background-color: #FC4100;
+    border: 10px solid #FFC55A;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials div {
+    padding: 20px;
+}
+
+#copyright {
+    font-size: 12px;
+}
+
+/*Mobile view*/
+@media screen and (max-width: 650px) {
+    nav {
+        display: block;
+        width: 96vw;
+    }
+
+    h2 {
+        margin-top: 300px;
+    }
+
+    .grid-container {
+        height: 325px;
+    }
+
+    .socials {
+        font-size: 12px;
+    }
+
+    .imageGallery img {
+        width: 100%;
+    }
+
+    .prototypeGallery img {
+        width: 48%;
+    }
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 20;
+    /* Higher than the nav */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.anchor-offset {
+    padding-top: 1px;
+    margin-top: -1px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
